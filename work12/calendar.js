@@ -10,5 +10,21 @@ function calendar(y){
 
         var mar = new Date(y,m,0).getDate();
         
+        html +='<tr>';
+        for(var m = 1;d<=max; ++d){
+            if(w && d==1){
+                html +='<td colspan="'+w+'"></td>';
+            }
+            html +='<td>'+d+'</td>';
+            if(w == 6 && d !==max){
+                html +='</td><tr>'
+            }else if(d == max){
+                html += '</tr>';
+            }
+            w = (w + 1>6) ? 0:w+1;
+        }
+        html += '</table>';
     }
+    html += '</table>';
+    return html;
 }
