@@ -8,9 +8,9 @@ function calendar(y) {
 
         var max = new Date(y,m,0).getDate();
 
-        html += '<tr>'; //开始<tr>标签
+        html += '<tr>'; 
         for (var d = 1; d <= max; ++d) {
-            if (w && d == 1) {// 如果该月的第一天不是星期日，则填充空白。
+            if (w && d == 1) {
                 html += '<td colspan="' + w + '"></td>';
             }
             html += '<td>' + d + '</td>';
